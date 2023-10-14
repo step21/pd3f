@@ -24,7 +24,13 @@ if REDIS_HOSTNAME is None:
     REDIS_HOSTNAME = "redis"
 else:
     REDIS_HOSTNAME = str(REDIS_HOSTNAME)
-    
+
+PARSR_HOSTNAME = os.environ.get("PARSR_HOSTNAME")
+if PARSR_HOSTNAME is None:
+    PARSR_HOSTNAME = "parsr"
+else:
+    PARSR_HOSTNAME = str(PARSR_HOSTNAME)
+
 JOB_TIMEOUT = os.environ.get("JOB_TIMEOUT")
 if JOB_TIMEOUT is None:
     # to disable timeout: set to -1
