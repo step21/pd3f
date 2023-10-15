@@ -314,7 +314,7 @@ def do_the_job(
         experimental=experimental,
         force_gpu=False,
         lang=flair_lang,
-        parsr_location="parsr:3001",
+        parsr_location=f"{PARSR_HOSTNAME}:3001",
         parsr_config=parsr_config or {},
         parsr_adjust_cleaner_config=parsr_adjust_cleaner_config or [],
     )
